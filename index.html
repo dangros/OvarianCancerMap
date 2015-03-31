@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Responsive SVG Map</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <!------------------>
+    <title>
+        Ovarian Cancer National Alliance | We work to save women&#039;s lives
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="http://www.ovariancancer.org/wp-content/themes/ovariancancer/images/fav.png" />
+    <link rel="stylesheet" type="text/css" href="http://www.ovariancancer.org/wp-content/themes/ovariancancer/style.css" />
+    <link rel="stylesheet" href="http://www.ovariancancer.org/wp-content/themes/ovariancancer/js/slicknav.css" />
+    <link rel="stylesheet" href="http://www.ovariancancer.org/wp-content/themes/ovariancancer/js/ocna_report_card.css" />
+    <link rel="stylesheet" href="http://www.ovariancancer.org/wp-content/themes/ovariancancer/js/jquery.qtip.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic,700italic|Open+Sans+Condensed:300,300italic' rel='stylesheet' type='text/css'>
+
+    <div class="container">
+
+
+        <div class="logo">
+            <a href="http://www.ovariancancer.org" title="We work to save women's lives"><img src="http://www.ovariancancer.org/wp-content/themes/ovariancancer/images/logo.png" alt=""></a>
+        </div>
+
+        <div class="mainnavdiv">
+            <div class="top-header">
+                <div class="top-links"><a href="https://web.charityengine.net/Default.aspx?tsid=1232">Donate</a><a href="http://www.ovariancancer.org/contact-info/">Contact Us</a></div>
+
+
+                <script type="text/javascript">
+                    //<![CDATA[
+                    if (typeof newsletter_check !== "function") {
+                        window.newsletter_check = function (f) {
+                            var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+                            if (!re.test(f.elements["ne"].value)) {
+                                alert("The email is not correct");
+                                return false;
+                            }
+                            if (f.elements["ny"] && !f.elements["ny"].checked) {
+                                alert("You must accept the privacy statement");
+                                return false;
+                            }
+                            return true;
+                        }
+                    }
+                    //]]>
+                </script>
+                <script>
+                    jQuery( document ).ready(function() {
+                        jQuery(".title").click(function(){
+                            console.log('am dat click aici') ;
+                            // console.log(jQuery(this).closest(".back")) ;
+                            jQuery(this).parents('.flip').children('.content').toggle('slow');
+                        });
+                    });
+                    jQuery(document).ready(function($){
+
+                        // toggle product list on click
+                        $('.hidden').hide();
+                        $('.toggler').click(function() {
+                            var $this = $(this);
+                            $this.next(".hidden").slideToggle("fast", function() {
+                                $this.find('span.showhide').text($(this).is(':visible') ? '- Hide Data' : '+ Show Data');
+                            });
+                        });
+
+                        // calculates table data values and puts them in a div td.subtotal
+                        // https://gist.github.com/778800
+                        function tally (selector) {
+                            $(selector).each(function () {
+                                var total = 0,
+                                        column = $(this).siblings(selector).andSelf().index(this);
+                                $(this).parents().prevUntil(':has(' + selector + ')').each(function () {
+                                    total += parseFloat($('td.sum:eq(' + column + ')', this).html()) || 0;
+                                })
+                                $(this).html(total);
+                            });
+                        }
+                        tally('td.subtotal');
+                        tally('td.total');
+
+                    });
+                </script>
+                <div class="neslettertext">Join our Mailing List</div>
+                <div class="nletter newsletter newsletter-subscription">
+                    <!--<form method="post" target="_blank" action="http://www.ovariancancer.org/wp-content/plugins/newsletter/do/subscribe.php" onSubmit="return newsletter_check(this)">
+
+                    <input class="nletter-input newsletter-email" placeholder="your email here" type="email" name="ne" size="30" required>
+                    <input class="nletter-submit newsletter-submit" type="submit" value="Subscribe"/>
+                    <input type="hidden" name="llr" value="748gy8dab">
+                                        <input type="hidden" name="m" value="1103664214012">
+                                        <input type="hidden" name="p" value="oi">
+                    </form> -->
+                    <form name="ccoptin" action="http://www.ovariancancer.org/join-mailing-list/" method="GET">
+
+                        <input type="text" name="ea" size="20" value="" placeholder="your email here" class="nletter-input newsletter-email" id="mail" required="">
+                        <input id="subscribe-submit" type="submit" class="nletter-submit newsletter-submit" name="go" value="Subscribe" style="margin:0 3px 0 0">
+                    </form>
+                </div>
+            </div>
+
+
+            <nav class="main-nav"><ul id="menu-main-menu" class="menu"><li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="http://www.ovariancancer.org/">HOME<br><span class="sub">page</span></a></li>
+                <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.ovariancancer.org/just-diagnosed/">Just Diagnosed<br><span class="sub">s.o.s.</span></a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/just-diagnosed/first-steps/">First Steps<br><span class="sub"></span></a></li>
+                        <li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/just-diagnosed/ovarian-cancer-community/">Ovarian Cancer Community<br><span class="sub"></span></a></li>
+                    </ul>
+                </li>
+                <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.ovariancancer.org/about/">About<br><span class="sub">ovarian cancer</span></a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/about/statistics/">Statistics<br><span class="sub"></span></a></li>
+                        <li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/about/risk-factors/">Risk Factors<br><span class="sub"></span></a></li>
+                        <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/about/treatment/">Treatment<br><span class="sub"></span></a></li>
+                        <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/about/symptoms-of-ovarian-cancer-detection/">Symptoms and Detection of Ovarian Cancer<br><span class="sub"></span></a></li>
+                        <li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/about/faq/">FAQs<br><span class="sub"></span></a></li>
+                    </ul>
+                </li>
+                <li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.ovariancancer.org/get-involved/">Get Involved<br><span class="sub">your impact</span></a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-9692" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/get-involved/ways-to-contribute-2/">Ways to Contribute<br><span class="sub"></span></a></li>
+                        <li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/get-involved/teal-product-partners/">Teal Product Partners<br><span class="sub"></span></a></li>
+                        <li id="menu-item-187" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/get-involved/survivors-teaching-students-sts/">Survivors Teaching Students: Saving Women’s Lives®<br><span class="sub"></span></a></li>
+                        <li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/get-involved/sponsor-the-alliance/">Sponsor the Alliance<br><span class="sub"></span></a></li>
+                        <li id="menu-item-185" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/get-involved/partner-members/">Partner Members<br><span class="sub"></span></a></li>
+                        <li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/get-involved/latest-events/">Events<br><span class="sub"></span></a></li>
+                        <li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/get-involved/advocacy-at-home/">Advocacy at Home<br><span class="sub"></span></a></li>
+                        <li id="menu-item-9154" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/get-involved/volunteer/">Volunteer<br><span class="sub"></span></a></li>
+                    </ul>
+                </li>
+                <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.ovariancancer.org/what-we-do/">What We Do<br><span class="sub">for you</span></a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/what-we-do/advocate-leaders/">Advocate Leaders<br><span class="sub"></span></a></li>
+                        <li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/what-we-do/research-advocacy/">Research Advocacy<br><span class="sub"></span></a></li>
+                        <li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/what-we-do/policy-positions/">Policy Positions<br><span class="sub"></span></a></li>
+                        <li id="menu-item-9093" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.ovariancancer.org/report-card/">Report Card<br><span class="sub"></span></a></li>
+                        <li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/what-we-do/grassroots/">Grassroots<br><span class="sub"></span></a></li>
+                        <li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/what-we-do/for-policy-makers/">For Policy Makers<br><span class="sub"></span></a></li>
+                        <li id="menu-item-19655" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.ovariancancer.org/what-we-do/su2c/">Stand Up To Cancer &amp; the Alliance<br><span class="sub"></span></a></li>
+                    </ul>
+                </li>
+            </ul></nav>
+        </div>
+
+    </div>
+
+    <!------------------>
+</head>
+<body ng-app="SvgMapApp" ng-controller="MainCtrl">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel panel-body">
+                    <div svg-map ></div>
+
+
+                    <div class="scale">
+                        <div ng-repeat="n in [0, 0.2, 0.4, 0.6, 0.8, 1]"
+                             ng-style="{backgroundColor:'{{n | map_color}}'}"> {{n}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <p>
+                <button ng-click="createDummyData()" class="btn btn- btn-default">Create Dummy Data</button>
+            </p>
+            <div class="panel panel-default">
+                <div class="panel panel-body">
+                    <div class="regionlist">
+                        <div ng-repeat="(key,region) in dummyData"
+                             ng-class="{active:hoverRegion==key}"
+                             ng-mouseover="changeHoverRegion(key)">
+                            <div>{{key}}</div>
+                            <div>{{region.value | number}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-touch/angular-touch.min.js"></script>
+<!--<script src="bower_components/angular-touch/ngClick.js"></script>-->
+<script src="js/controllers.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/filters.js"></script>
+</body>
+</html>
