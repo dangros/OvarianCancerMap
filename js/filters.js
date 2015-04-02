@@ -1,4 +1,4 @@
-angular.module('SvgMapApp').filter('map_color', [function () {
+angular.module('MapApp').filter('map_color', [function () {
     return function (input) {
         var b = 255 - Math.floor(input * 255);
         var g = Math.floor(input * 255);

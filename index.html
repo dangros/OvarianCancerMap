@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html ng-app="MapApp" ng-controller="MainCtrl">
+<head lang="en" >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Responsive SVG Map</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/main.css"/>
 
-    <!------------------>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+
+    <script src="js/directives.js"></script>
+    <script src="js/filters.js"></script>
+    <!--script src="js/Router.js"></script-->
+
     <title>
         Ovarian Cancer National Alliance | We work to save women&#039;s lives
     </title>
@@ -20,9 +30,7 @@
     <link rel="stylesheet" href="http://www.ovariancancer.org/wp-content/themes/ovariancancer/js/jquery.qtip.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic,700italic|Open+Sans+Condensed:300,300italic' rel='stylesheet' type='text/css'>
 
-    <div class="container">
-
-
+    <div class="container " >
         <div class="logo">
             <a href="http://www.ovariancancer.org" title="We work to save women's lives"><img src="http://www.ovariancancer.org/wp-content/themes/ovariancancer/images/logo.png" alt=""></a>
         </div>
@@ -32,7 +40,7 @@
                 <div class="top-links"><a href="https://web.charityengine.net/Default.aspx?tsid=1232">Donate</a><a href="http://www.ovariancancer.org/contact-info/">Contact Us</a></div>
 
 
-                <script type="text/javascript">
+                <!--script type="text/javascript">
                     //<![CDATA[
                     if (typeof newsletter_check !== "function") {
                         window.newsletter_check = function (f) {
@@ -49,8 +57,8 @@
                         }
                     }
                     //]]>
-                </script>
-                <script>
+                </script-->
+                <!--script>
                     jQuery( document ).ready(function() {
                         jQuery(".title").click(function(){
                             console.log('am dat click aici') ;
@@ -85,7 +93,7 @@
                         tally('td.total');
 
                     });
-                </script>
+                </script-->
                 <div class="neslettertext">Join our Mailing List</div>
                 <div class="nletter newsletter newsletter-subscription">
                     <!--<form method="post" target="_blank" action="http://www.ovariancancer.org/wp-content/plugins/newsletter/do/subscribe.php" onSubmit="return newsletter_check(this)">
@@ -150,8 +158,13 @@
     </div>
 
     <!------------------>
+    <ul class="nav nav-tabs ">
+        <li class="active"> <a  href="#/">Home</a></li>
+        <li> <a href="#/VA"><span>Is for Lo</span><span class="glyphicon glyphicon-heart"></span><span>vers</span></a></li>
+    </ul>
 </head>
-<body ng-app="SvgMapApp" ng-controller="MainCtrl">
+<body>
+
 
 <div class="container">
     <div class="row">
@@ -189,11 +202,8 @@
         </div>
     </div>
 </div>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-touch/angular-touch.min.js"></script>
-<!--<script src="bower_components/angular-touch/ngClick.js"></script>-->
-<script src="js/controllers.js"></script>
-<script src="js/directives.js"></script>
-<script src="js/filters.js"></script>
+<div><a>HI!!!!!!!</a></div>
+<div ng-view></div>
+<div><a>HI2!!!!!!!</a></div>
 </body>
 </html>

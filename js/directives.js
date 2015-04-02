@@ -1,4 +1,4 @@
-angular.module('SvgMapApp').directive('svgMap', ['$compile', function ($compile) {
+angular.module('MapApp').directive('svgMap', ['$compile', function ($compile) {
     return {
         restrict: 'A',
         templateUrl: 'img/Blank_US_Map.svg',
@@ -15,7 +15,7 @@ angular.module('SvgMapApp').directive('svgMap', ['$compile', function ($compile)
     }
 }]);
 
-angular.module('SvgMapApp').directive('region', ['$compile', function ($compile) {
+angular.module('MapApp').directive('region', ['$compile', '$location', function ($compile, $location) {
     return {
         restrict: 'A',
         scope: {
@@ -25,8 +25,8 @@ angular.module('SvgMapApp').directive('region', ['$compile', function ($compile)
         link: function (scope, element, attrs) {
             scope.elementId = element.attr("id");
             scope.regionClick = function () {
-                alert(scope.elementId + " ==> " + element.attr("dummy-data"));
-
+                //alert(scope.elementId + " ==> " + element.attr("dummy-data"));
+                $location.path('/' + scope.elementId);
             };
             scope.regionMouseOver = function () {               //<
                 scope.hoverRegion = scope.elementId;            //<--- hover over region highlight grid
